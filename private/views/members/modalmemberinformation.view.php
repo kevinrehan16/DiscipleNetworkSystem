@@ -159,7 +159,7 @@
                           <tr style="padding: 0px !important;">
                             <th width='80%' style="vertical-align: middle;">Children Name</th>
                             <th width='15%' style="vertical-align: middle;">Age</th>
-                            <th width='5%'><button type="button" class="btn btn-md btn-info" onclick="appendChildForm();"><i class="bx bx-plus"></i></button></th>
+                            <th width='5%'><button type="button" class="btn btn-md btn-info d-flex align-items-center justify-content-center gap-1" onclick="appendChildForm();"><i class="bx bx-plus"></i></button></th>
                           </tr>
                         </thead>
                         <tbody id="tblChildren">
@@ -433,9 +433,9 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" id="btnSaveMember" class="btn btn-success btn-sm" onclick="savenewmember();"><i class='bx bx-save' id="saveIcon"></i> Save</button>
+        <button type="button" id="btnSaveMember" class="btn btn-success btn-sm d-flex align-items-center justify-content-center gap-1" onclick="savenewmember();"><i class='bx bx-save' id="saveIcon"></i> Save</button>
         <!-- <button type="submit" class="btn btn-primary"><i class='bx bx-save'></i> Save</button> -->
-        <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal"><i class='bx bx-x'></i> Close</button>
+        <button type="button" class="btn btn-danger btn-sm d-flex align-items-center justify-content-center gap-1" data-bs-dismiss="modal"><i class='bx bx-x'></i> Close</button>
       </div>
     </div>
   </div>

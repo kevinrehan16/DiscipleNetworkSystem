@@ -57,7 +57,7 @@
                 </div>
               </div>
               <div class="col-md-2 text-end">
-                <button type="button" class="btn btn-primary btn-md" onclick="addnewmember();"><i class='bx bxs-user-plus'></i> Add Member</button>
+                <button type="button" class="btn btn-primary btn-md d-flex align-items-center justify-content-center gap-1" onclick="addnewmember();"><i class='bx bxs-user-plus'></i> Add Member</button>
               </div>
             </div>
           </div>

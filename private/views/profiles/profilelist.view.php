@@ -26,16 +26,16 @@
             <div class="card-body shadow-sm p-0">
               <ul class="list-group list-group-flush rounded-3" id="group-list-info">
                 <li class="list-group-item d-flex justify-content-between align-items-center p-3 active">
-                  <a class="text-primary">Personal Information</a>
-                  <i class='bx bxs-chevron-right text-primary'></i>
+                  <a class="text-black-50">Profile Information</a>
+                  <i class='bx bxs-chevron-right text-black-50'></i>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                  <a class="text-primary">Growth-Group Information</a>
-                  <i class='bx bxs-chevron-right text-primary'></i>
+                  <a class="text-black-50">Growth-Group Information</a>
+                  <i class='bx bxs-chevron-right text-black-50'></i>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                  <a class="text-primary">GGLI Class Information</a>
-                  <i class='bx bxs-chevron-right text-primary'></i>
+                  <a class="text-black-50">GGLI Class Information</a>
+                  <i class='bx bxs-chevron-right text-black-50'></i>
                 </li>
               </ul>
             </div>
@@ -44,19 +44,63 @@
       </div>
       <div class="col-lg-9">
         <div class="card">
-          <div class="card-body shadow-sm shadow-sm border-top border-5 border-primary">
+          <div class="card-header">
+            <i class="fas fa-users text-success"></i>Personal Information
+          </div>
+          <div class="card-body shadow-sm shadow-sm">
             <div class="row">
-              <div class="col-md-3"><span class="text-primary fw-bold">Nickname</span>: <span class="mb-0" id="lblnickname"></span></div>
-              <div class="col-md-3"><span class="text-primary fw-bold">Gender</span>: <span class="mb-0" id="lblgender"></span></div>
-              <div class="col-md-3"><span class="text-primary fw-bold">Life-Stage</span>:  <span class="mb-0" id="lbllifestage"></span></div>
-              <div class="col-md-3"><span class="text-primary fw-bold">Birthday</span>:  <span class="mb-0" id="lblbirthday"></span></div>
-            </div>
-            <br>
-            <div class="row">
-              <div class="col-md-3"><span class="text-primary fw-bold">Email</span>: <span class="mb-0" id="lblemail"></span></div>
-              <div class="col-md-3"><span class="text-primary fw-bold">Facebook</span>: <span class="mb-0" id="lblfacebook"></span></div>
-              <div class="col-md-3"><span class="text-primary fw-bold">Mobile</span>: <span class="mb-0" id="lblmobile"></span></div>
-              <div class="col-md-3"><span class="text-primary fw-bold">Age</span>: <span class="mb-0" id="lblage"></span></div>
+              <div class="col-md-6">
+                <div class="row">
+                  <label for="" class="col-md-4 fw-bold text-black-50">Nickname:</label>
+                  <div class="col-md-8">
+                    <span class="mb-0" id="lblnickname"></span>
+                  </div>
+                </div>
+                <div class="row">
+                  <label for="" class="col-md-4 fw-bold text-black-50">Gender:</label>
+                  <div class="col-md-8">
+                    <span class="mb-0" id="lblgender"></span>
+                  </div>
+                </div>
+                <div class="row">
+                  <label for="" class="col-md-4 fw-bold text-black-50">Life-Stage:</label>
+                  <div class="col-md-8">
+                    <span class="mb-0" id="lbllifestage"></span>
+                  </div>
+                </div>
+                <div class="row">
+                  <label for="" class="col-md-4 fw-bold text-black-50">Birthday:</label>
+                  <div class="col-md-8">
+                    <span class="mb-0" id="lblbirthday"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row">
+                  <label for="" class="col-md-4 fw-bold text-black-50">Email:</label>
+                  <div class="col-md-8">
+                    <span class="mb-0" id="lblemail"></span>
+                  </div>
+                </div>
+                <div class="row">
+                  <label for="" class="col-md-4 fw-bold text-black-50">Facebook:</label>
+                  <div class="col-md-8">
+                    <span class="mb-0" id="lblfacebook"></span>
+                  </div>
+                </div>
+                <div class="row">
+                  <label for="" class="col-md-4 fw-bold text-black-50">Mobile:</label>
+                  <div class="col-md-8">
+                    <span class="mb-0" id="lblmobile"></span>
+                  </div>
+                </div>
+                <div class="row">
+                  <label for="" class="col-md-4 fw-bold text-black-50">Age:</label>
+                  <div class="col-md-8">
+                    <span class="mb-0" id="lblage"></span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -71,18 +115,18 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-5">
                     <label class="text-black-50 fw-bold">Father's Name:</label>
                   </div>
-                  <div class="col-md-8 text-left">
+                  <div class="col-md-7 text-left">
                     <p class="mb-1" id="lblfathername">Johny Smith</p>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-5">
                     <label class="text-black-50 fw-bold">Mother's Name:</label>
                   </div>
-                  <div class="col-md-8 text-left">
+                  <div class="col-md-7 text-left">
                     <p class="mb-0" id="lblmothername">Susan Smith</p>
                   </div>
                 </div>
@@ -165,7 +209,7 @@
               </div>
               <div class="col-md-4">
                 <label class="text-black-50 fw-bold mb-2">High School Name:</label>
-                <p class="mb-0" id="lblcity">Muntinlupa City</p>
+                <p class="mb-0" id="lblhighschool">Pedro E Diaz</p>
               </div>
             </div>
             <hr>
@@ -196,13 +240,13 @@
               </div>
               <div class="col-md-4">
                 <label class="text-black-50 fw-bold mb-2">Have you been baptized by immersion? When?</label>
-                <p class="mb-0" id="lblwhenbaptized"><span class="badge bg-success fw-light">Yes</span> |  January 1, 2020</p>
+                <p class="mb-0"><span class="badge bg-success fw-light" id="lblbaptized">Yes</span> | <span id="lblwhenbaptized"> January 1, 2020 </span></p>
               </div>
               <div class="col-md-4">
                 <label class="text-black-50 fw-bold mb-2">What are your Spiritual Gifts?:</label>
-                <p class="mb-0" id="lblspiritualgifts">
+                <div class="mb-0" id="lblspiritualgifts">
                   <span class="badge bg-success fw-light">Teaching</span> <span class="badge bg-danger fw-light">Encouragement</span> <span class="badge bg-warning fw-light">Leadership</span>
-                </p>
+                </div>
               </div>
             </div>
             <hr>

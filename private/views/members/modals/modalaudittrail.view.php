@@ -10,6 +10,7 @@
           <div class="container pt-3">
             <div class="row">
               <div class="col-md-12">
+                <input type="hidden" id="memberIdLogs">
                 <div class="table-parent">
                   <table class="table table-bordered table-hover table-striped fixTable">
                     <thead>
@@ -41,12 +42,28 @@
 
 <script>
   var allLogs = [];
+  const labelMap = {
+    middlename: "Middle Name",
+    nickname: "Nickname",
+    baptizeddate: "Baptized Date",
+    recForMembership: "Rec. For Membership",
+    // Add more custom mappings as needed...
+  };
+
 
   $(function(){
-    getAuditTrails();
+    // getAuditTrails();
   });
 
+  function viewLogs(memberid){
+    $("#memberIdLogs").val(memberid);
+    getAuditTrails();
+    $("#modalaudittrail").modal("show");
+  }
+
   function getAuditTrails(){
+    var logs = "";
+    var memberIdLogs = $("#memberIdLogs").val();
     var auditInformation = '';
 
     $.ajax({
@@ -54,22 +71,47 @@
       url: '<?=ROOT_PUBLIC?>/audittraillist/getAuditTrail',
       dataType: 'json',
       data: {
+        memberIdLogs: memberIdLogs,
         auditInformation: auditInformation
+      },
+      beforeSend: function(){
+        $("#tblmodalaudittrail").html("<tr><td colspan='5' class='text-center'>Loading Records...</td></tr>");
       },
       success: function(data){
         allLogs = data;
-        console.log(allLogs);
-        
-        var logs = "";
-        data.forEach(log => {
-          logs += "<tr>"+
-            "<td>"+log.old_data.substr(0, 10)+"</td>"+
-            "<td>"+log.new_data.substr(0, 10)+"</td>"+
-            "<td>"+log.changed_byName+"</td>"+
-            "<td>"+log.action_type+"</td>"+
-            "<td>"+log.change_timestamp+"</td>"+
-          "</tr>";
-        });
+        // console.log(allLogs);
+
+        allLogs = data;
+        let allLogsLength = Array.isArray(allLogs) ? allLogs.length : 0;
+
+        if(allLogsLength > 0){
+          $.each(allLogs, function(index, log){
+            const logOldObj = JSON.parse(log.old_data);
+            let logDetailsHtml = "";
+            for (let key in logOldObj) {
+              var label = labelMap[key] || key;
+              logDetailsHtml += `<span><span>${label}:</span> ${logOldObj[key]}</span><br>`;
+            }
+
+            const logNewObj = JSON.parse(log.new_data);
+            let logNewDetailsHtml = "";
+            for (let key in logNewObj) {
+              var label = labelMap[key] || key;
+              logNewDetailsHtml += `<span><span>${label}:</span> ${logNewObj[key]}</span><br>`;
+            }
+
+            logs += "<tr>"+
+              "<td>"+logDetailsHtml+"</td>"+
+              "<td>"+logNewDetailsHtml+"</td>"+
+              "<td>"+log.changed_byName+"</td>"+
+              "<td>"+log.action_type+"</td>"+
+              "<td>"+log.change_timestamp+"</td>"+
+            "</tr>";
+          });
+        }
+        else{
+          logs = "<tr><td class='text-center' colspan='9'>No Record Found</td></tr>";
+        }
 
         $("#tblmodalaudittrail").html(logs);
       }

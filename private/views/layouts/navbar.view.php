@@ -29,7 +29,7 @@
   <div class="profile">
     <img src="<?=ROOT_PRIVATE?>/views/memberimage/<?php echo $userMemberID; ?>/<?php echo $userPicture; ?>" alt="Profile">
     <ul class="profile-link">
-      <li><a href="javascript:void(0)"><img src="<?=ROOT_PRIVATE?>/views/memberimage/<?php echo $userMemberID; ?>/<?php echo $userPicture; ?>" alt="Profile"> <?php echo $userFullname ?></a></li>
+      <li><a href="<?=ROOT_PUBLIC?>/profilelist/<?php echo $_SESSION['memberDefaultId']; ?>"><img src="<?=ROOT_PRIVATE?>/views/memberimage/<?php echo $userMemberID; ?>/<?php echo $userPicture; ?>" alt="Profile"> <?php echo $userFullname ?></a></li>
       <li><a href="javascript:void(0)" onclick="openModal('modalchangepass');"><i class='bx bx-lock-open'></i> Change Password</a></li>
       <li onclick="logoutAccount();"><a href="javascript:void(0)"><i class='bx bx-log-out-circle'></i> Logout</a></li>
     </ul>

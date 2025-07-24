@@ -25,6 +25,8 @@
   --light-pink: #f7b9e0;
   --green: #81d43a;
   --light-green: #e3ffcb;
+  --royal: #a100a1;
+  --light-royal: #c703c7;
 }
 
 html {
@@ -50,13 +52,14 @@ li {
 }
 
 hr {
-  background-color: var(--dark-blue) !important;
+  background-color: var(--royal) !important;
 }
 
 /* Add to your CSS file */
 @keyframes spin {
   100% { transform: rotate(360deg); }
 }
+
 .loading-spinner {
   display: inline-block;
   width: 1em;
@@ -137,7 +140,7 @@ hr {
   align-items: center;
   height: 63px;
   font-weight: 700;
-  color: var(--blue);
+  color: var(--light-royal);
   position: sticky;
   top: 0;
   left: 0;
@@ -197,7 +200,7 @@ hr {
 
 #sidebar .side-menu > li > a.active,
 #sidebar .side-menu > li > a.active:hover {
-  background: var(--blue);
+  background: var(--royal);
   color: var(--light);
 }
 
@@ -231,11 +234,11 @@ hr {
 }
 
 #sidebar .side-dropdown a:hover {
-  color: var(--blue);
+  color: var(--light-royal);
 }
 
 #sidebar .side-dropdown a.selected {
-  color: var(--blue) !important;
+  color: var(--light-royal) !important;
 }
 
 #sidebar .ads {
@@ -265,7 +268,7 @@ hr {
   align-items: center;
   padding: 12px 0;
   color: var(--light);
-  background: var(--blue);
+  background: var(--light-royal);
   transition: all .3s ease;
   border-radius: 5px;
   font-weight: 600;
@@ -273,7 +276,7 @@ hr {
 }
 
 #sidebar .btn-upgrade:hover {
-  background: var(--dark-blue);
+  background: var(--royal);
 }
 
 #sidebar .ads .wrapper p {
@@ -309,7 +312,7 @@ nav {
   padding: 0 20px !important;
   display: flex !important;
   align-items: center !important;
-  grid-gap: 28px !important;
+  grid-gap: 20px !important;
   position: sticky !important;
   top: 0 !important;
   left: 0 !important;
@@ -341,7 +344,7 @@ nav .form-group input {
 }
 
 nav .form-group input:focus {
-  box-shadow: 0 0 0 1px var(--blue), 0 0 0 4px var(--light-blue);
+  box-shadow: 0 0 0 1px var(--light-royal), 0 0 0 4px var(--light-blue);
 }
 
 nav .form-group .icon {
@@ -410,7 +413,7 @@ nav .profile .profile-link {
   border-radius: 10px;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, .1);
   padding: 10px 0;
-  width: 300px;
+  width: 250px;
   opacity: 0;
   pointer-events: none;
   transition: all .3s ease;
@@ -439,7 +442,7 @@ nav .profile .profile-link a:hover {
 .side-dropdown > li a.active,
 .side-dropdown > li a.active .pointer-icon {
   font-weight: 700 !important;
-  color: var(--blue) !important;
+  color: var(--light-royal) !important;
 }
 
 
@@ -473,7 +476,7 @@ main .breadcrumbs li a {
 }
 
 main .breadcrumbs li a {
-  color: var(--blue);
+  color: var(--light-royal);
 }
 
 main .breadcrumbs li a.active,
@@ -559,7 +562,7 @@ main .info-data .card-form {
 
 .card-header, 
 .modal-header {
-  background-color: var(--dark-blue) !important;
+  background-color: var(--royal) !important;
   color: var(--light) !important;
   font-weight: 700 !important;
   text-transform: uppercase;
@@ -581,11 +584,11 @@ main .info-data .card-form {
 }
 
 .table-parent {
-  height: 350px;
+  height: 280px;
 }
 
 .table > thead, th {
-  background-color: var(--dark) !important;
+  background-color: var(--dark-grey) !important;
   font-weight: 500 !important;
   color: var(--light);
   font-size: 14px;
@@ -611,6 +614,10 @@ main .info-data .card-form {
   border: 1px solid var(--dark-grey);
 }
 
+.table > tbody > tr > td > a:hover {
+  text-decoration: underline !important;
+}
+
 .btn {
   color: var(--light) !important;
 }
@@ -619,7 +626,7 @@ main .info-data .card-form {
   color: #1e61e2;
 }
 .bx-notepad {
-  color: #d41ee2;
+  color: #0ca13c;
 }
 .bx-task-x {
   color: #e58931;
@@ -895,7 +902,7 @@ td.td-btn {
 /*! HIERACHY CSS */
 
 #heirarchy-card-parent {
-  height: 530px; /* Adjust height as needed */
+  height: 460px; /* Adjust height as needed */
 }
 
 #heirarchy-card-parent .card-body {
@@ -913,8 +920,8 @@ td.td-btn {
   width: 300px;
   padding: 20px;
   margin: 10px;
-  border-left: 5px solid var(--dark-blue);
-  border-right: 5px solid var(--dark-blue);
+  border-left: 5px solid var(--royal);
+  border-right: 5px solid var(--royal);
 }
 
 .hierarchy-card-image img {
@@ -970,14 +977,14 @@ td.td-btn {
 .img-thumbnail {
     padding: .25rem;
     background-color: #fff;
-    border: 4px solid var(--blue);
+    border: 4px solid var(--light-royal);
     border-radius: .25rem;
     max-width: 100%;
     height: auto;
 }
 
 #group-list-info .list-group-item:hover {
-  background-color: var(--dark-blue);
+  background-color: var(--royal);
   cursor: pointer;
 }
 
@@ -987,7 +994,8 @@ td.td-btn {
 }
 
 #group-list-info .list-group-item.active {
-  background-color: var(--dark-blue);
+  background-color: var(--royal);
+  border-color: var(--light-royal) !important;
   cursor: pointer;
 }
 

@@ -284,8 +284,8 @@
                             "<td>"+escapeHtml(memberInfo.emailaddress)+"</td>"+
                             "<td class='td-btn'>"+
                               "<i class='btn-icon bx bxs-edit' title='Edit information' onclick='editInformation(\""+escapeHtml(memberInfo.id)+"\");'></i>"+
-                              "<i class='btn-icon bx bx-notepad' title='View logs' onClick='viewLogs();'></i>"+
-                              "<i class='btn-icon bx bx-task-x' title='Remove'></i>"+
+                              "<i class='btn-icon bx bx-notepad' title='View logs' onClick='viewLogs(\""+escapeHtml(memberInfo.memberid)+"\");'></i>"+
+                              // "<i class='btn-icon bx bx-task-x' title='Remove'></i>"+
                             "</td>"+
                           "</tr>";
           });
@@ -304,10 +304,6 @@
 
       }
     });
-  }
-
-  function viewLogs(){
-    $("#modalaudittrail").modal("show");
   }
 
   function updateMemberStatus(defaultID, mfullname, memstatus){
@@ -537,7 +533,7 @@
     $("#tblChildren").append("<tr id='children-"+formCount+"'>"+
                               "<td><input type='text' name='childname[]' class='form-control child-name input-sm m-0 txt_firstCapital'></td>"+
                               "<td><input type='text' name='childage[]' class='form-control child-age input-sm m-0 numonly text-center' maxlength='3'></td>"+
-                              "<td><button type='button' class='btn btn-danger btn-md' onclick='removeChildForm(\"children-"+formCount+"\");'><span class='bx bx-trash'></span></button></td>"+
+                              "<td><button type='button' class='btn btn-danger btn-md d-flex align-items-center justify-content-center gap-1' onclick='removeChildForm(\"children-"+formCount+"\");'><span class='bx bx-trash'></span></button></td>"+
                             "</tr>");
     validators();
   }
